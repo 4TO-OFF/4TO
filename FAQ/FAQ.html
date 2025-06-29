@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - Pose ta question</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="faq-container">
+    <h1>FAQ - Pose ta question</h1>
+    <p>Tu as une question ? Pose-la ici, je te répondrai dès que possible !</p>
+
+    <form action="https://formspree.io/f/xgvydeql" method="POST" class="faq-form">
+      <label for="email">Ton email (pour la réponse) :</label>
+      <input type="email" id="email" name="email" placeholder="exemple@mail.com" required />
+
+      <label for="question">Ta question :</label>
+      <textarea id="question" name="question" rows="6" placeholder="Écris ta question ici..." required></textarea>
+
+      <button type="submit">Envoyer la question</button>
+    </form>
+  </div>
+</body>
+</html>
