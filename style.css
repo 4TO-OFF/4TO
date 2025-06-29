@@ -6,14 +6,17 @@
 
 html, body {
   font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
   background: #0f0f0f;
   color: white;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
