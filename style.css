@@ -24,7 +24,6 @@ body {
   position: relative;
 }
 
-/* Fond animé */
 body::before {
   content: "";
   position: fixed;
@@ -56,7 +55,6 @@ body::before {
   gap: 40px;
 }
 
-/* Fursona */
 .fursona-wrapper {
   margin-bottom: 30px;
 }
@@ -69,7 +67,6 @@ body::before {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Tuiles */
 .tile-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +96,6 @@ body::before {
   transform: scale(1.07);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .tile-wrapper a {
     flex: 0 0 calc(33.333% - 25px);
