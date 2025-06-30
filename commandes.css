@@ -127,9 +127,9 @@ input {
 @media screen and (max-width: 768px) {
   .glass-nav {
     flex-direction: column;
-    top: 0;
+    top: 10px;
     padding: 20px 10px;
-    border-radius: 0 0 25px 25px;
+    border-radius: 25px 25px 25px 25px;
   }
 
   .glass-nav ul {
@@ -141,7 +141,7 @@ input {
 
 @media screen and (max-width: 600px) {
   .terminal-window {
-    margin-top: 40px;
+    margin-top: 20px;
     transform: translateY(30px); 
   }
 
