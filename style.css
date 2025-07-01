@@ -1,27 +1,18 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f0f0f;
-  color: white;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  margin: 0; padding: 0;
 }
 
 body {
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
-  height: auto;
-  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 20px;
   position: relative;
+  overflow: hidden;
 }
 
 body::before {
@@ -32,18 +23,6 @@ body::before {
   background: linear-gradient(130deg, #0f0f0f, #6e6e6e, #adadad);
   background-size: 200% 200%;
   animation: moveGradient 15s linear infinite;
-}
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }
 
 .container {
@@ -64,7 +43,7 @@ body::before {
   height: 240px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .tile-wrapper {
@@ -86,7 +65,7 @@ body::before {
   text-align: center;
   border-radius: 18px;
   text-decoration: none;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, background 0.3s ease;
   user-select: none;
 }

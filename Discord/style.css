@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.discord-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discord-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(114, 137, 218, 0.4);
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.discord-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25%;
+  box-shadow: 0 0 12px rgba(114, 137, 218, 0.3);
+}
+
+.discord-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.discord-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #7289DA;
+}
+
+.discord-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.discord-btn {
+  display: inline-block;
+  background-color: #7289DA;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discord-btn:hover {
+  background-color: #5b6eae;
+  box-shadow: 0 0 10px #7289DAaa;
+}
+
+@media screen and (max-width: 768px) {
+  .discord-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .discord-logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .discord-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .discord-content p {
+    font-size: 0.95rem;
+  }
+}
