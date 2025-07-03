@@ -12,7 +12,6 @@ body {
   align-items: flex-start;
   padding: 40px 20px;
   position: relative;
-  overflow: hidden;
 }
 
 body::before {
