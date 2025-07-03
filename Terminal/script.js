@@ -27,7 +27,7 @@ input.addEventListener("keydown", function (e) {
       if (cmd === "clear") {
         const lines = terminal.querySelectorAll(".line");
         lines.forEach((line, index) => {
-          if (index > 0) line.remove(); // garde le premier message
+          if (index > 0) line.remove(); 
         });
       } else {
         appendLine(commands[cmd]);
