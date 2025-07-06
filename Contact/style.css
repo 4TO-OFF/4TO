@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 70px;
 }
 
 .contact-container {
@@ -85,4 +86,25 @@ body {
 .contact-form button:hover {
   background: linear-gradient(135deg, #2c78e4, #58a3f7);
   transform: scale(1.05);
+}
+
+.btn-accueil {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #70d6ff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-accueil:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }

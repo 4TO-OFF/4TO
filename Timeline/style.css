@@ -5,6 +5,7 @@ body {
   padding: 2rem 1rem;
   margin: 0;
   user-select: none;
+  padding-top: 70px;
 }
 
 h1 {
@@ -55,4 +56,25 @@ h1 {
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.4;
+}
+
+.btn-accueil {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #70d6ff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-accueil:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
