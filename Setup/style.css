@@ -54,6 +54,12 @@ ul li {
   line-height: 1.5;
 }
 
+ul li:hover {
+  color: #2c91b9;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
 .btn-accueil {
   position: absolute;
   top: 20px;
@@ -73,4 +79,16 @@ ul li {
 .btn-accueil:hover {
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  ul {
+    padding-left: 15px;
+  }
 }

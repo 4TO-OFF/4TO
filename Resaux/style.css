@@ -91,3 +91,80 @@ h1 {
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.social-links a:hover {
+  transform: scale(1.05);
+}
+.social-links a {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links a[aria-label="YouTube"]:hover {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.social-links a[aria-label="TikTok"]:hover {
+  background-color: #010101;
+  color: #fff;
+}
+
+.social-links a[aria-label="Reddit"]:hover {
+  background-color: #FF4500;
+  color: #fff;
+}
+
+.social-links a[aria-label="Twitch"]:hover {
+  background-color: #9146FF;
+  color: #fff;
+}
+
+.social-links a[aria-label="Instagram"]:hover {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+  color: #fff;
+}
+
+.social-links a[aria-label="GitHub"]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-links a[aria-label="Discord"]:hover {
+  background-color: #5865F2;
+  color: #fff;
+}
+
+.social-links a[aria-label="Spotify"]:hover {
+  background-color: #1DB954;
+  color: #fff;
+}
+
+.social-links a[aria-label="Ko-fi"]:hover {
+  background-color: #FF5E5B;
+  color: #fff;
+}
+
+.social-links a[aria-label="X (Twitter)"]:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.social-links a[aria-label="Chess.com"]:hover {
+  background-color: #5e8c31;
+  color: #fff;
+}
+
+.social-links a[aria-label="GD Games"]:hover {
+  background-color: #ffcc00;
+  color: #111;
+}
+
+.social-links a[aria-label="Steam"]:hover {
+  background-color: #171a21;
+  color: #fff;
+}
+
+.social-links a[aria-label="Roblox"]:hover {
+  background-color: #c1c1c1;
+  color: #111;
+}

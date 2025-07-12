@@ -2,7 +2,7 @@ document.querySelectorAll('.img-compare').forEach(container => {
   const left = container.querySelector('.left-img');
   const right = container.querySelector('.right-img');
   const slider = container.querySelector('.slider');
-
+ 
   let isDragging = false;
 
   const move = (e) => {
