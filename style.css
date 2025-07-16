@@ -6,26 +6,13 @@
 
 html, body {
   height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   text-align: center;
-}
-
-.page {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 body::before {
@@ -39,9 +26,9 @@ body::before {
 }
 
 .container {
-  flex: 1;
   max-width: 1100px;
   width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,19 +39,17 @@ body::before {
 .fursona-wrapper {
   margin-bottom: 30px;
   max-width: 100%;
-  overflow: visible;
 }
 
 .fursona {
   width: 240px;
-  height: 240px;
   max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   animation: fadeUp 0.6s ease-in-out forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .tile-wrapper {
@@ -77,7 +62,7 @@ body::before {
 }
 
 .tile-wrapper a {
-  flex: 1 1 22%; /* environ 4 boutons par ligne */
+  flex: 1 1 22%;
   max-width: 250px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -94,10 +79,9 @@ body::before {
   cursor: pointer;
   user-select: none;
   text-shadow: 0 0 4px rgba(0,0,0,0.3);
-  opacity: 0;
+  opacity: 1;
   animation: fadeUp 0.6s ease-in-out forwards;
   will-change: opacity, transform;
-  box-sizing: border-box;
 }
 
 .tile-wrapper a:hover {
@@ -106,6 +90,7 @@ body::before {
   box-shadow: 0 0 10px #58a3f7, 0 0 20px #58a3f7;
 }
 
+/* Animations échelonnées */
 .tile-wrapper a:nth-child(1) { animation-delay: 0.1s; }
 .tile-wrapper a:nth-child(2) { animation-delay: 0.2s; }
 .tile-wrapper a:nth-child(3) { animation-delay: 0.3s; }
@@ -125,10 +110,10 @@ body::before {
 .tile-wrapper a:nth-child(17) { animation-delay: 1.7s; }
 .tile-wrapper a:nth-child(18) { animation-delay: 1.8s; }
 
+/* Responsive */
 @media (max-width: 900px) {
   .tile-wrapper a {
-    flex: 1 1 30%; /* 3 boutons par ligne */
-    max-width: none;
+    flex: 1 1 30%;
     font-size: 14px;
     padding: 16px 0;
   }
@@ -137,10 +122,10 @@ body::before {
 @media (max-width: 600px) {
   .fursona {
     width: 180px;
-    height: 180px;
+    height: auto;
   }
   .tile-wrapper a {
-    flex: 1 1 45%; /* 2 boutons par ligne */
+    flex: 1 1 45%;
     font-size: 14px;
     padding: 14px 0;
   }
@@ -148,7 +133,7 @@ body::before {
 
 @media (max-width: 400px) {
   .tile-wrapper a {
-    flex: 1 1 100%; /* 1 bouton par ligne */
+    flex: 1 1 100%;
   }
 }
 
