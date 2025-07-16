@@ -1,5 +1,7 @@
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,7 +44,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 300px;
+  width: 320px;
 }
 
 .social-links a {
@@ -55,12 +57,19 @@ h1 {
   color: #111;
   font-weight: 600;
   box-shadow: 0 0 10px rgba(112, 214, 255, 0.5);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .social-links a:hover {
   background-color: rgba(112, 214, 255, 0.5);
   box-shadow: 0 0 20px rgba(112, 214, 255, 0.9);
+  transform: scale(1.05);
 }
 
 .social-links a img {
@@ -69,6 +78,33 @@ h1 {
   margin-right: 15px;
   filter: invert(14%) sepia(86%) saturate(2570%) hue-rotate(173deg) brightness(98%) contrast(101%);
   pointer-events: none;
+}
+
+.social-links a:nth-child(1) { animation-delay: 0.1s; }
+.social-links a:nth-child(2) { animation-delay: 0.2s; }
+.social-links a:nth-child(3) { animation-delay: 0.3s; }
+.social-links a:nth-child(4) { animation-delay: 0.4s; }
+.social-links a:nth-child(5) { animation-delay: 0.5s; }
+.social-links a:nth-child(6) { animation-delay: 0.6s; }
+.social-links a:nth-child(7) { animation-delay: 0.7s; }
+.social-links a:nth-child(8) { animation-delay: 0.8s; }
+.social-links a:nth-child(9) { animation-delay: 0.9s; }
+.social-links a:nth-child(10) { animation-delay: 1.0s; }
+.social-links a:nth-child(11) { animation-delay: 1.1s; }
+.social-links a:nth-child(12) { animation-delay: 1.2s; }
+.social-links a:nth-child(13) { animation-delay: 1.3s; }
+.social-links a:nth-child(14) { animation-delay: 1.4s; }
+.social-links a:nth-child(15) { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-accueil {
@@ -92,79 +128,17 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.social-links a:hover {
-  transform: scale(1.05);
-}
-.social-links a {
-  transition: transform 0.2s ease-in-out;
-}
-
-.social-links a[aria-label="YouTube"]:hover {
-  background-color: #FF0000;
-  color: #fff;
-}
-
-.social-links a[aria-label="TikTok"]:hover {
-  background-color: #010101;
-  color: #fff;
-}
-
-.social-links a[aria-label="Reddit"]:hover {
-  background-color: #FF4500;
-  color: #fff;
-}
-
-.social-links a[aria-label="Twitch"]:hover {
-  background-color: #9146FF;
-  color: #fff;
-}
-
-.social-links a[aria-label="Instagram"]:hover {
-  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
-  color: #fff;
-}
-
-.social-links a[aria-label="GitHub"]:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.social-links a[aria-label="Discord"]:hover {
-  background-color: #5865F2;
-  color: #fff;
-}
-
-.social-links a[aria-label="Spotify"]:hover {
-  background-color: #1DB954;
-  color: #fff;
-}
-
-.social-links a[aria-label="Ko-fi"]:hover {
-  background-color: #FF5E5B;
-  color: #fff;
-}
-
-.social-links a[aria-label="X (Twitter)"]:hover {
-  background-color: #000000;
-  color: #fff;
-}
-
-.social-links a[aria-label="Chess.com"]:hover {
-  background-color: #5e8c31;
-  color: #fff;
-}
-
-.social-links a[aria-label="GD Games"]:hover {
-  background-color: #ffcc00;
-  color: #111;
-}
-
-.social-links a[aria-label="Steam"]:hover {
-  background-color: #171a21;
-  color: #fff;
-}
-
-.social-links a[aria-label="Roblox"]:hover {
-  background-color: #c1c1c1;
-  color: #111;
-}
+.social-links a[aria-label="YouTube"]:hover    { background-color: #FF0000; color: #fff; }
+.social-links a[aria-label="TikTok"]:hover     { background-color: #010101; color: #fff; }
+.social-links a[aria-label="Reddit"]:hover     { background-color: #FF4500; color: #fff; }
+.social-links a[aria-label="Twitch"]:hover     { background-color: #9146FF; color: #fff; }
+.social-links a[aria-label="Instagram"]:hover  { background: linear-gradient(45deg, #feda75, #d62976, #962fbf); color: #fff; box-shadow: none; }
+.social-links a[aria-label="GitHub"]:hover     { background-color: #333; color: #fff; }
+.social-links a[aria-label="Discord"]:hover    { background-color: #5865F2; color: #fff; }
+.social-links a[aria-label="Spotify"]:hover    { background-color: #1DB954; color: #fff; }
+.social-links a[aria-label="Ko-fi"]:hover      { background-color: #FF5E5B; color: #fff; }
+.social-links a[aria-label="X (Twitter)"]:hover{ background-color: #000000; color: #fff; }
+.social-links a[aria-label="Chess.com"]:hover  { background-color: #5e8c31; color: #fff; }
+.social-links a[aria-label="GD Games"]:hover   { background-color: #ffcc00; color: #111; }
+.social-links a[aria-label="Steam"]:hover      { background-color: #171a21; color: #fff; }
+.social-links a[aria-label="Roblox"]:hover     { background-color: #c1c1c1; color: #111; }

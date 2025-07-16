@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="menu">
+        <li><a href="#" onclick="filterServices('all')">Tous</a></li>
+        <li><a href="#" onclick="filterServices('web')">Site Web</a></li>
+        <li><a href="#" onclick="filterServices('discord')">Serveur Discord</a></li>
+        <li><a href="#" onclick="filterServices('mod')">Modération</a></li>
+        <li><a href="#" onclick="filterServices('draftbot')">DraftBot</a></li>
+      </ul>
+    </div>
+  </nav>
+  <a href="../index.html" class="btn-accueil">Accueil</a>
+  <section class="service status-active" data-category="web" id="web">
+    <h1>Builder de site web</h1>
+    <p class="description-service">Création site web HTML, CSS, JS sur-mesure.</p>
+    <div class="status-container">
+      <span class="status-dot"></span>
+      <span class="status-text"></span>
+    </div>
+    <div class="service-details">
+      <h3> Contenu de l’offre</h3>
+      <ul>
+        <li>Site web sur-mesure (HTML/CSS/JS)</li>
+        <li>Jusqu’à 5 pages (free tier)</li>
+        <li>Responsive mobile</li>
+        <li>Hébergement sur GitHub Pages</li>
+        <li>Tout est possible sans backend</li>
+      </ul>
+      <h3> Options</h3>
+      <ul>
+        <li>Link in bio</li>
+        <li>Portfolio</li>
+        <li>Présentation de produit</li>
+        <li>Fonctionnalités dynamiques possibles (si hébergement backend dispo)</li>
+      </ul>
+      <h3> Tarifs</h3>
+      <ul>
+        <li>0€ pour particuliers (limité à 5 pages)</li>
+        <li>50€ pour professionnels (aucune limite)</li>
+        <li>50% à la commande, 50% à la livraison</li>
+      </ul>
+      <h3> Conditions</h3>
+      <ul>
+        <li>Revente autorisée uniquement si ma pub reste visible</li>
+        <li>Fonctionnalités avancées (formulaire, base de données...) possibles uniquement si un hébergeur backend est fourni</li>
+      </ul>
+      <h3> Délais</h3>
+      <ul>
+        <li>2 à 21 jours selon le projet</li>
+      </ul>
+      <h3>Révisions</h3>
+      <ul>
+        <li>10 révisions gratuites par mois</li>
+        <li>5€ par révision supplémentaire</li>
+      </ul>
+      <h3> Contact</h3>
+      <ul>
+        <li><a href="https://discord.gg/RyBtBdf3xp" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
+      </ul>
+    </div>
+
+    <div class="exemples-sites">
+      <h2>Exemples de sites réalisés</h2>
+      <ul>
+        <li><a href="https://4to-off.github.io/narutoto234/" target="_blank" rel="noopener noreferrer">Narutoto234 - Link in bio</a></li>
+        <li><a href="https://4to-off.github.io/sam/" target="_blank" rel="noopener noreferrer">Sam - Link in bio</a></li>
+        <li><a href="https://4to-off.github.io/lezzar/" target="_blank" rel="noopener noreferrer">Lezzar - Site web</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="service status-active" data-category="discord" id="discord">
+    <h1>Création de serveur Discord</h1>
+    <p class="description-service">Création complète du serveur : rôles, salons privés, processus d’accueil, bots...</p>
+    <div class="status-container">
+      <span class="status-dot"></span>
+      <span class="status-text"></span>
+    </div>
+    <div class="service-details">
+      <h3> Contenu de l’offre</h3>
+      <ul>
+        <li>Serveur Discord complet configuré</li>
+        <li>Rôles, salons publics et privés</li>
+        <li>Bots essentiels et accueil automatique</li>
+        <li>Permissions bien gérées et sécurisées</li>
+      </ul>
+      <h3> Options</h3>
+      <ul>
+        <li>Reaction roles</li>
+        <li>Tickets support</li>
+        <li>Design full custom sur demande</li>
+      </ul>
+      <h3> Tarifs</h3>
+      <ul>
+        <li>0€ si pub laissée (ex: "Serveur créé par 4TO-OFF")</li>
+        <li>1€ si sans pub</li>
+      </ul>
+      <h3> Conditions</h3>
+      <ul>
+        <li>Pas de revente du serveur</li>
+        <li>Le client doit être admin du serveur</li>
+      </ul>
+      <h3> Délais</h3>
+      <ul>
+        <li>3 à 14 jours</li>
+      </ul>
+      <h3> Révisions</h3>
+      <ul>
+        <li>Pas de révision après livraison</li>
+        <li>Modifications = nouvelle commande</li>
+      </ul>
+      <h3> Contact</h3>
+      <ul>
+        <li><a href="https://discord.gg/RyBtBdf3xp" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="service status-active" data-category="mod" id="mod">
+    <h1>Modération Discord</h1>
+    <p class="description-service">J’aide à la modération du serveur : sanctions, surveillance, aide modération (texte uniquement).</p>
+    <div class="status-container">
+      <span class="status-dot"></span>
+      <span class="status-text"></span>
+    </div>
+    <div class="service-details">
+      <h3> Contenu de l’offre</h3>
+      <ul>
+        <li>Modération complète (texte uniquement, pas vocal)</li>
+        <li>Sanctions, surveillance, gestion des conflits</li>
+        <li>Aide à l’équipe modération et signalements</li>
+      </ul>
+      <h3> Options</h3>
+      <ul>
+        <li>Aucune option supplémentaire</li>
+        <li>Intervention selon ma disponibilité</li>
+      </ul>
+      <h3> Tarifs</h3>
+      <ul>
+        <li>Gratuit</li>
+      </ul>
+      <h3> Conditions</h3>
+      <ul>
+        <li>Dois avoir tous les droits nécessaires</li>
+        <li>Pas d’abus dans les demandes</li>
+      </ul>
+      <h3> Délais</h3>
+      <ul>
+        <li>Intervention quand je suis disponible</li>
+      </ul>
+      <h3> Révisions</h3>
+      <ul>
+        <li>Modération continue, pas de limite</li>
+      </ul>
+      <h3> Contact</h3>
+      <ul>
+        <li><a href="https://discord.gg/RyBtBdf3xp" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="service status-active" data-category="draftbot" id="draftbot">
+    <h1>Configuration DraftBot</h1>
+    <p class="description-service">Configuration complète de DraftBot, réglages personnalisés et commandes.</p>
+    <div class="status-container">
+      <span class="status-dot"></span>
+      <span class="status-text"></span>
+    </div>
+    <div class="service-details">
+      <h3> Contenu de l’offre</h3>
+      <ul>
+        <li>Configuration complète de DraftBot</li>
+        <li>Réglages personnalisés adaptés au serveur</li>
+      </ul>
+      <h3> Options</h3>
+      <ul>
+        <li>Aucune option supplémentaire</li>
+      </ul>
+      <h3> Tarifs</h3>
+      <ul>
+        <li>Gratuit tant que DraftBot poste une pub mensuelle</li>
+      </ul>
+      <h3> Conditions</h3>
+      <ul>
+        <li>Être admin sur le serveur</li>
+        <li>DraftBot doit être installé</li>
+      </ul>
+      <h3> Délais</h3>
+      <ul>
+        <li>1 à 14 jours selon la charge</li>
+      </ul>
+      <h3> Révisions</h3>
+      <ul>
+        <li>Révisions illimitées tant que le service est actif</li>
+        <li>Plus de révisions gratuites après</li>
+      </ul>
+      <h3> Contact</h3>
+      <ul>
+        <li><a href="https://discord.gg/RyBtBdf3xp" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
+      </ul>
+    </div>
+  </section>
+  <div class="temoignages" id="temoignages">
+    <h2>💬 Témoignages</h2>
+    <div class="temoignages-slider">
+      <div class="temoignage-card">
+        <p><strong>rmdeltanarutoto234_ - Site</strong><br>Oui j'adore merci... c'est parfait.</p>
+      </div>
+      <div class="temoignage-card">
+        <p><strong>biston083 - Site</strong><br>En vrai il est parfait le site... trop beau.</p>
+      </div>
+    </div>
+  </div>
+  <button onclick="scrollToTop()" class="scroll-top">⬆</button>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function filterServices(category) {
+      const all = document.querySelectorAll('.service');
+      all.forEach(service => {
+        service.style.display = (category === 'all' || service.dataset.category === category) ? 'block' : 'none';
+      });
+      const temoignages = document.getElementById('temoignages');
+      if (category === 'all' || category === 'web') {
+        temoignages.style.display = 'block';
+      } else {
+        temoignages.style.display = 'none';
+      }
+    }
+    window.onload = () => {
+      filterServices('all');
+    };
+    function toggleMenu() {
+  document.querySelector('.navbar ul.menu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

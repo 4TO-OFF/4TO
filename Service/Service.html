@@ -3,80 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - Builder & Discord</title>
+  <title>Services</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="menu">
+        <li><a href="#" onclick="filterServices('all')">Tous</a></li>
+        <li><a href="#" onclick="filterServices('web')">Site Web</a></li>
+        <li><a href="#" onclick="filterServices('discord')">Serveur Discord</a></li>
+        <li><a href="#" onclick="filterServices('mod')">Modération</a></li>
+        <li><a href="#" onclick="filterServices('draftbot')">DraftBot</a></li>
+      </ul>
+    </div>
+  </nav>
   <a href="../index.html" class="btn-accueil">Accueil</a>
-  <header class="status-active">
+  <section class="service status-active" data-category="web" id="web">
     <h1>Builder de site web</h1>
-    <div class="status-container">
-      <span class="status-dot"></span>
-      <span class="status-text"></span>
+    <p class="description-service">Création site web HTML, CSS, JS sur-mesure.</p>
+    <div style="text-align: center;">
+      <a class="btn-voir-service" href="web/web.html">Voir ce service</a>
     </div>
-  </header>
-  <section class="service-info">
-    <h2>Tarifs & Conditions</h2>
-    <ul>
-      <li><strong>Tarif de base :</strong> À partir de 0€ pour particuliers, 50€ pour professionnels</li>
-      <li><strong>Options :</strong> Link in bio, portfolio, vitrine, blog... Pas de back-end sauf si vous possédez un hébergeur</li>
-      <li><strong>Conditions :</strong> 50% à la commande, 50% à la livraison</li>
-      <li><strong>Contact :</strong> Rejoins le Discord pour discuter ➡️ <a href="https://discord.gg/tondiscord" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
-      <li><strong>Révisions :</strong> Jusqu'à 10 révisions incluses par mois, au-delà 5€ la révision</li>
-      <li><strong>Délai :</strong> Livraison en 2 à 21 jours selon la complexité et la disponibilité</li>
-    </ul>
   </section>
-  <header class="status-active">
+  <section class="service status-inactive" data-category="discord" id="discord">
     <h1>Création de serveur Discord</h1>
-    <div class="status-container">
-      <span class="status-dot"></span>
-      <span class="status-text"></span>
+    <p class="description-service">Configuration complète du serveur : rôles, salons privés, bots...</p>
+    <div style="text-align: center;">
+      <!--<a class="btn-voir-service" href="discord/discord.html">Voir ce service</a>-->
     </div>
-  </header>
-  <section class="service-info">
-    <h2>Tarifs & Conditions</h2>
-    <ul>
-      <li><strong>Tarif de base :</strong> 0€</li>
-      <li><strong>Options :</strong> Personnalisation, rôles, salons, bots...</li>
-      <li><strong>Conditions :</strong> Pas de conditions</li>
-      <li><strong>Contact :</strong> Rejoins le Discord pour discuter ➡️ <a href="https://discord.gg/tondiscord" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
-      <li><strong>Révisions :</strong> Autant que vous voulez, puis plus aucune quand le serveur est terminé</li>
-      <li><strong>Délai :</strong> 2 jours à 2 semaines</li>
-    </ul>
   </section>
-  <header class="status-active">
+  <section class="service status-inactive" data-category="mod" id="mod">
     <h1>Modération Discord</h1>
-    <div class="status-container">
-      <span class="status-dot"></span>
-      <span class="status-text"></span>
+    <p class="description-service">Aide à la modération du serveur : surveillance, sanctions, aide.</p>
+    <div style="text-align: center;">
+      <!--<a class="btn-voir-service" href="mod/mod.html">Voir ce service</a>-->
     </div>
-  </header>
-  <section class="service-info">
-    <h2>Tarifs & Conditions</h2>
-    <ul>
-      <li><strong>Tarif de base :</strong> 0€</li>
-      <li><strong>Options :</strong> Modération active, gestion des sanctions...</li>
-      <li><strong>Conditions :</strong> Ne pas me donner trop d’ordres</li>
-      <li><strong>Contact :</strong> Rejoins le Discord pour discuter ➡️ <a href="https://discord.gg/tondiscord" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
-    </ul>
   </section>
-  <header class="status-active">
+  <section class="service status-inactive" data-category="draftbot" id="draftbot">
     <h1>Configuration DraftBot</h1>
-    <div class="status-container">
-      <span class="status-dot"></span>
-      <span class="status-text"></span>
+    <p class="description-service">Configuration complète de DraftBot avec réglages personnalisés.</p>
+    <div style="text-align: center;">
+      <!--<a class="btn-voir-service" href="draftbot/draftbot.html">Voir ce service</a>-->
     </div>
-  </header>
-  <section class="service-info">
-    <h2>Tarifs & Conditions</h2>
-    <ul>
-      <li><strong>Tarif de base :</strong> 0€</li>
-      <li><strong>Options :</strong> Paramétrage complet du bot selon les besoins</li>
-      <li><strong>Conditions :</strong> Avoir les droits admin et DraftBot</li>
-      <li><strong>Contact :</strong> Rejoins le Discord pour discuter ➡️ <a href="https://discord.gg/tondiscord" target="_blank" rel="noopener noreferrer">Mon Discord</a></li>
-      <li><strong>Révisions :</strong> 25 par mois, puis 1€/révision supplémentaire</li>
-      <li><strong>Délai :</strong> 1 jour à 1 semaine</li>
-    </ul>
   </section>
+  <button onclick="scrollToTop()" class="scroll-top">⬆</button>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function filterServices(category) {
+      const all = document.querySelectorAll('.service');
+      all.forEach(service => {
+        service.style.display = (category === 'all' || service.dataset.category === category) ? 'block' : 'none';
+      });
+    }
+    function toggleMenu() {
+      document.querySelector('.navbar ul.menu').classList.toggle('show');
+    }
+    window.onload = () => {
+      filterServices('all');
+    };
+  </script>
 </body>
 </html>
