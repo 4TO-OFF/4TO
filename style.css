@@ -184,3 +184,16 @@ footer a {
     background-position: 100% 50%;
   }
 }
+
+@media (max-width: 600px) {
+  .tile-wrapper a {
+    flex: 0 0 50%; 
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .tile-wrapper a {
+    flex: 0 0 100%;
+  }
+}
