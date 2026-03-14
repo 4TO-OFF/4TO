@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "MaFont";
+    src: url("fonts/Minecraftia-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "MaFont", sans-serif;
+}
+
+body{
+margin:0;
+background:#1b1b1b;
+color:#faf6f4;
+
+scroll-snap-type:y mandatory;
+overflow-y:scroll;
+}
+
+.bloc{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding:40px;
+box-sizing:border-box;
+
+scroll-snap-align:start;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0, 0, 0, 0.32);
+z-index:0;
+}
+
+.card{
+background:#242424;
+border-radius:20px;
+display:flex;
+gap:40px;
+align-items:center;
+padding:40px;
+max-width:1200px;
+width:100%;
+z-index:1;
+}
+
+.text{
+flex:1;
+}
+
+img{
+width:420px;
+border-radius:16px;
+object-fit:cover;
+}
+
+.bloc:nth-child(even) .card{
+flex-direction:row-reverse;
+}
+
+@media(max-width:900px){
+
+.card{
+flex-direction:column;
+}
+
+.bloc:nth-child(even) .card{
+flex-direction:column;
+}
+
+img{
+width:100%;
+}
+
+}
