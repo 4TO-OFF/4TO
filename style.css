@@ -78,3 +78,30 @@ width:100%;
 }
 
 }
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card.x::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+
+  background:
+    linear-gradient(45deg,
+      transparent calc(50% - 2px),
+      red calc(50% - 2px),
+      red calc(50% + 2px),
+      transparent calc(50% + 2px)
+    ),
+    linear-gradient(-45deg,
+      transparent calc(50% - 2px),
+      red calc(50% - 2px),
+      red calc(50% + 2px),
+      transparent calc(50% + 2px)
+    );
+}
