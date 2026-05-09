@@ -1,107 +1,93 @@
 @font-face {
     font-family: "MaFont";
     src: url("fonts/Minecraftia-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
 }
 
 body{
-    font-family: "MaFont", sans-serif;
-}
+    margin:0;
+    height:100vh;
 
-body{
-margin:0;
-background:#1b1b1b;
-color:#faf6f4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-scroll-snap-type:y mandatory;
-overflow-y:scroll;
-}
+    background:#1b1b1b;
+    color:#faf6f4;
 
-.bloc{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-padding:40px;
-box-sizing:border-box;
+    font-family:"MaFont", sans-serif;
 
-scroll-snap-align:start;
+    overflow:hidden;
 }
 
 .overlay{
-position:absolute;
-inset:0;
-background:rgba(0, 0, 0, 0.32);
-z-index:0;
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,0.35);
+
+    z-index:0;
 }
 
 .card{
-background:#242424;
-border-radius:20px;
-display:flex;
-gap:40px;
-align-items:center;
-padding:40px;
-max-width:1200px;
-width:100%;
-z-index:1;
+    position:relative;
+    z-index:1;
+
+    background:#242424;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+    width:500px;
+
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
 }
 
-.text{
-flex:1;
+h1{
+    margin:0;
+
+    font-size:32px;
+
+    text-align:center;
 }
 
-img{
-width:420px;
-border-radius:16px;
-object-fit:cover;
+.buttons{
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
 }
 
-.bloc:nth-child(even) .card{
-flex-direction:row-reverse;
+button{
+    font-family:"MaFont", sans-serif;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    background:#333;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.2s;
 }
 
-@media(max-width:900px){
+button:hover{
+    background:#444;
 
-.card{
-flex-direction:column;
+    transform:scale(1.02);
 }
 
-.bloc:nth-child(even) .card{
-flex-direction:column;
-}
-
-img{
-width:100%;
-}
-
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card.x::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-
-  background:
-    linear-gradient(45deg,
-      transparent calc(50% - 2px),
-      red calc(50% - 2px),
-      red calc(50% + 2px),
-      transparent calc(50% + 2px)
-    ),
-    linear-gradient(-45deg,
-      transparent calc(50% - 2px),
-      red calc(50% - 2px),
-      red calc(50% + 2px),
-      transparent calc(50% + 2px)
-    );
+button:active{
+    transform:scale(0.98);
 }
